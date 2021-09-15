@@ -7,11 +7,17 @@
   <ItemGroup>
     <None Remove="Controllers\" />
     <None Remove="Models\" />
-    <None Remove="Views\HttpSample\" />
+    <None Remove="Views\Shared\" />
+    <None Remove="Areas\" />
+    <None Remove="Areas\RazorAdditional\" />
+    <None Remove="Areas\RazorAdditional\Pages\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\HttpSample\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="Areas\" />
+    <Folder Include="Areas\RazorAdditional\" />
+    <Folder Include="Areas\RazorAdditional\Pages\" />
   </ItemGroup>
 </Project>

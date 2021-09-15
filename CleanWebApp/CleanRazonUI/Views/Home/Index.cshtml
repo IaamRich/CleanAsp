@@ -1,14 +1,12 @@
-﻿@{
-    Layout = "_Layout";
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_LayoutMain";
+    ViewData["Title"] = "Index PAGE";
 }
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CleanRazonUI</title>
-</head>
-<body>
+<div>
     <p>Id: @Model.Id</p>
     <p>Name: @Model.Name</p>
-</body>
-</html>
+    <a asp-page="/Privacy" asp-area="RazorAdditional">Go privacy</a>
+
+    <partial name="_ContactsEverywhere" />
+</div>

@@ -52,6 +52,9 @@ namespace CleanRazonUI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    "areas",
+                    "{area}/{controller=DLRequests}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
                     "default",
                     "{controller=home}/{action=index}/{id?}");
                 endpoints.MapRazorPages();
