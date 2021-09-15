@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.810.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanUI", "CleanUI\CleanUI.csproj", "{E39771D0-2419-4452-8C0D-E956BB27E656}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanApi", "CleanApi\CleanApi.csproj", "{4D525313-830F-4639-833F-9AFC6804AD6F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanEntityFramework", "CleanEntityFramework\CleanEntityFramework.csproj", "{08CC690A-FA8F-4A8D-86C1-B0042239432F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanRazonUI", "CleanRazonUI\CleanRazonUI.csproj", "{D1A6E420-64B6-4470-B56B-3F772D260E5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E39771D0-2419-4452-8C0D-E956BB27E656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E39771D0-2419-4452-8C0D-E956BB27E656}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E39771D0-2419-4452-8C0D-E956BB27E656}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E39771D0-2419-4452-8C0D-E956BB27E656}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4D525313-830F-4639-833F-9AFC6804AD6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4D525313-830F-4639-833F-9AFC6804AD6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D525313-830F-4639-833F-9AFC6804AD6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{08CC690A-FA8F-4A8D-86C1-B0042239432F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08CC690A-FA8F-4A8D-86C1-B0042239432F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08CC690A-FA8F-4A8D-86C1-B0042239432F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1A6E420-64B6-4470-B56B-3F772D260E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1A6E420-64B6-4470-B56B-3F772D260E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1A6E420-64B6-4470-B56B-3F772D260E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1A6E420-64B6-4470-B56B-3F772D260E5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
