@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CleanRazonUI.Infrastructure;
+using CleanRazonUI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -23,7 +25,13 @@ namespace CleanRazonUI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddMvc();
+            services.AddSingleton<Logger>();
+            services.AddSingleton<ExceptionLogingAttribute>();
+            services.AddMvc(options =>
+            {
+                options.Filters.Add<ProfileAttribute>();
+                options.Filters.AddService<ExceptionLogingAttribute>();
+            });
             services.AddRazorPages();
         }
 

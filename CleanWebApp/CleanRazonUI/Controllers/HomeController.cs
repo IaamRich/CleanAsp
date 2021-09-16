@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
+using CleanRazonUI.Infrastructure;
 using CleanRazonUI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -8,6 +9,7 @@ namespace CleanRazonUI.Controllers
 {
     public class HomeController : Controller
     {
+        //[TypeFilter(typeof(ExceptionLogingAttribute))]
         public IActionResult Index()
         {
             Product product = new Product()
@@ -15,11 +17,13 @@ namespace CleanRazonUI.Controllers
                 Id = 1,
                 Name = "Test"
             };
+            if (true) throw new System.Exception();
             return View(product);
         }
-
+        //[ExceptionLoging]
         public IActionResult Catalog()
         {
+            //if (true) throw new System.Exception();
             Product product = new Product()
             {
                 Id = 1,
@@ -50,7 +54,9 @@ namespace CleanRazonUI.Controllers
             Debug.WriteLine(selectedItem);
             return View("Result", selectedItem);
         }
-
+        //PROFILE FILTER SET INTO STARTUP.CS
+        //[Profile]
+        [ResultProfile]
         public IActionResult SendRequests()
         {
             return View(new FormViewModel() { Name = "default", TermsAccepted = true });

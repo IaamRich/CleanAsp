@@ -1,0 +1,19 @@
+На выполнение метода CleanRazonUI.Controllers.HomeController.Index (CleanRazonUI) затрачено 00:00:03.4474408
+Message: Exception of type 'System.Exception' was thrown.
+
+Stack Trace:    at CleanRazonUI.Controllers.HomeController.Index() in /Users/vladimircuraciov/Documents/job/learning/CleanAsp/CleanWebApp/CleanRazonUI/Controllers/HomeController.cs:line 20
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+На выполнение метода CleanRazonUI.Controllers.HomeController.Contacts (CleanRazonUI) затрачено 00:00:00.1522606
+На выполнение метода CleanRazonUI.Controllers.HomeController.SendRequests (CleanRazonUI) затрачено 00:00:00.0038912
+На выполнение результата CleanRazonUI.Controllers.HomeController.SendRequests (CleanRazonUI) затрачено 00:00:00.2021241
