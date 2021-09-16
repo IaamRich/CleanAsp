@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using CleanEF.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,6 +10,7 @@ namespace CleanEF.Controllers
 
         public HomeController(AppDbContext context)
         {
+            Context = context;
         }
 
         public IActionResult Index()
