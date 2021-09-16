@@ -1,10 +1,21 @@
 ﻿using System;
+using System.Linq;
+using CleanEF.Models;
+using Microsoft.AspNetCore.Mvc;
+
 namespace CleanEF.Controllers
 {
-    public class HomeController
+    public class HomeController : Controller
     {
-        public HomeController()
+        public AppDbContext Context { get; }
+
+        public HomeController(AppDbContext context)
         {
+        }
+
+        public IActionResult Index()
+        {
+            return View(Context.Products.ToList());
         }
     }
 }
