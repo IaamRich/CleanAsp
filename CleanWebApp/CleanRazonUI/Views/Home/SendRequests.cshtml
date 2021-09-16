@@ -1,4 +1,4 @@
-﻿
+﻿@model CleanRazonUI.Models.FormViewModel
 @{
     Layout = "_LayoutMain";
     ViewData["Title"] = "Send Requests Page";
@@ -7,8 +7,11 @@
 <h3>Simple request form page</h3>
 <p></p>
 <form action="/Home/SendRequests" method="post">
-    <label>Name</label>
-    <input type="tel" name="name" />
+    @*<div class="form-group">
+
+            <label>Name</label>
+            <input type="tel" name="name" clss="form-control" />
+        </div>*@
 
     <label>Addresses</label>
     <input type="tel" name="address" />
@@ -21,17 +24,46 @@
     <input type="tel" name="addresses" />
     <br />
 
-    <label>ad2</label>
-    <input type="tel" name="addresses" />
-    <br />
-
     <label>ad3</label>
     <input type="tel" name="addresses" />
     <br />
 
-    <button type="submit">Send</button>
+    <button class="btn btn-primary" type="submit">Send</button>
 </form>
 
 <br />
 <br />
 
+<form asp-controller="home" asp-action="SendRequests" method="post">
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <label>Addresses</label>
+    <input type="text" asp-for="Address" />
+
+    <label>Phone</label>
+    <input type="text" asp-for="Phone" />
+    <span asp-validation-for="Phone" class="text-danger"></span>
+    <br />
+
+    <label>ad1</label>
+    <input type="tel" name="addresses" />
+    <br />
+
+    <div style="margin-left:50px">
+        <input type="checkbox" asp-for="TermsAccepted" class="form-check-input" value="true" />
+        <label for="TermsAccepted">Terms</label>
+    </div>
+    <button class="btn btn-primary" type="submit">Send</button>
+</form>
+
+@section Scripts
+{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}

@@ -1,11 +1,14 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@{
+﻿@{
     Layout = "_LayoutMain";
     ViewData["Title"] = "Contacts PAGE";
 }
 
 @model CleanRazonUI.Models.ContactsViewModel
 
+<form asp-action="contacts" asp-controller="home" method="post">
+    <select name="SelectedItem" asp-items="@ViewBag.SelectItems"></select>
+    <input type="submit" />
+</form>
 <h3>Simple loading partial view</h3>
 <partial name="_ContactsEverywhere" />
 
