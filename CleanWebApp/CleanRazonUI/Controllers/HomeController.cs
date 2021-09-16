@@ -1,4 +1,6 @@
-﻿using CleanRazonUI.Models;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
+using CleanRazonUI.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanRazonUI.Controllers
@@ -27,12 +29,38 @@ namespace CleanRazonUI.Controllers
 
         public IActionResult Contacts()
         {
-            Product product = new Product()
+            ContactsViewModel contacts = new ContactsViewModel()
             {
-                Id = 1,
-                Name = "Test"
+                Email = "gggwe@gewg.com",
+                Phone = "+ 3553 2235 23",
+                Address = "2345 Jozeph street 57GH"
             };
-            return View(product);
+            return View(contacts);
+        }
+
+        public IActionResult SendRequests()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SendRequests(FormViewModel model, List<string> addresses)
+        {
+            Debug.WriteLine(model.Name);
+            Debug.WriteLine(model.Address);
+            Debug.WriteLine(model.Phone);
+            foreach (var item in addresses)
+            {
+                Debug.WriteLine(item);
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Index([FromHeader] string myValue)
+        {
+            Debug.WriteLine("Transfered Value = " + myValue);
+            return View();
         }
     }
 }

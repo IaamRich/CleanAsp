@@ -3,4 +3,14 @@
     Layout = "_LayoutMain";
     ViewData["Title"] = "Contacts PAGE";
 }
+
+@model CleanRazonUI.Models.ContactsViewModel
+
+<h3>Simple loading partial view</h3>
 <partial name="_ContactsEverywhere" />
+
+<h3>Simple loading partial view with transferred data from Model of this View</h3>
+@await Html.PartialAsync("_ContactsWithModel", Model)
+@{
+    //можно и без Model, если мы не объявляли model в начале. Она возьмёт ту модельку которую мы передали в это представление из контроллера
+}

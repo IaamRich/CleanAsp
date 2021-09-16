@@ -8,5 +8,21 @@
     <p>Name: @Model.Name</p>
     <a asp-page="/Privacy" asp-area="RazorAdditional">Go privacy</a>
 
+    <br />
+    <br />
+
+    <button id="btn">Send By JS</button>
+    <script>document.querySelector("#btn").addEventListener("click", function () {
+            let xhr = new XMLHttpRequest();
+            let data = new FormData();
+
+            data.append("myValue", "form-value");
+            xhr.open("POST", "/Home/Index?myValue=query-string-value");
+            xhr.setRequestHeader("myValue", "header-value");
+            xhr.send(data);
+        })</script>
+
+    <br />
+    <br />
     <partial name="_ContactsEverywhere" />
 </div>

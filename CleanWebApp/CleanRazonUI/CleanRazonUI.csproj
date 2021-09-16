@@ -11,6 +11,9 @@
     <None Remove="Areas\" />
     <None Remove="Areas\RazorAdditional\" />
     <None Remove="Areas\RazorAdditional\Pages\" />
+    <None Remove="Components\" />
+    <None Remove="Views\Shared\Components\" />
+    <None Remove="Views\Shared\Components\VcAsView\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -19,5 +22,8 @@
     <Folder Include="Areas\" />
     <Folder Include="Areas\RazorAdditional\" />
     <Folder Include="Areas\RazorAdditional\Pages\" />
+    <Folder Include="Components\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\VcAsView\" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,25 @@
-﻿@{
+﻿@using CleanRazonUI.Components
+@{
     Layout = "_LayoutMain";
     ViewData["Title"] = "Catalog PAGE";
 }
+
 <h1>product 1</h1>
 <h1>product 2</h1>
 <h1>product 3</h1>
+
+<p>
+    @await Component.InvokeAsync("ViewAsClass")
+</p>
+
+<p>
+    @await Component.InvokeAsync(nameof(VCFromBase))
+</p>
+
+<p>
+    @await Component.InvokeAsync(nameof(VcAsCode))
+</p>
+
+<p>
+    @await Component.InvokeAsync(nameof(VcAsView))
+</p>
